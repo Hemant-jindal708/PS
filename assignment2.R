@@ -23,12 +23,12 @@ conditional_probability <- function(p_a_given_b, p_b, p_a) {
   return((p_a_given_b * p_b) / p_a)
 }
 
-p_C_given_R <- 0.85
-p_R <- 0.2
-p_C <- 0.4
+p_c_given_r <- 0.85
+p_r <- 0.2
+p_c <- 0.4
 
-p_R_given_C <- conditional_probability(p_C_given_R, p_R, p_C)
-print(p_R_given_C)
+p_r_given_c <- conditional_probability(p_c_given_r, p_r, p_c)
+print(p_r_given_c)
 
 # question 4
 # Load the iris dataset
@@ -56,10 +56,10 @@ cat("Median of Sepal Length:", sepal_length_median, "\n")
 
 # (f) Find the first and third quartiles & interquartile range
 sepal_length_quartiles <- quantile(iris$Sepal.Length, probs = c(0.25, 0.75))
-sepal_length_IQR <- IQR(iris$Sepal.Length)
+sepal_length_iqr <- IQR(iris$Sepal.Length)
 cat("First Quartile (Q1):", sepal_length_quartiles[1], "\n")
 cat("Third Quartile (Q3):", sepal_length_quartiles[2], "\n")
-cat("Interquartile Range (IQR):", sepal_length_IQR, "\n")
+cat("Interquartile Range (IQR):", sepal_length_iqr, "\n")
 
 # (g) Find standard deviation and variance of sepal length
 sepal_length_sd <- sd(iris$Sepal.Length)
